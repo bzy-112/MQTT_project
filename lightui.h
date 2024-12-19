@@ -16,11 +16,10 @@ class LIGHTUI : public QWidget
     Q_OBJECT
     /*定义一个可读(READ)并且可写(WRITE)的属性，并且可以通过属性名称进行访问*/
     Q_PROPERTY(int endAngle READ endAngle WRITE setEndAngle NOTIFY endAngleChanged)
+    Q_PROPERTY(int endCo2 READ endCo2 WRITE setEndCo2 NOTIFY setCo2Changed)
 
     float Light_Intensity;//光照强度
     float Carbom_Intensity;//二氧化碳浓度
-    int m_startAngle;
-    int m_endAngle;
 
     int m_light = 0;
     int m_CO2 = 0;
@@ -30,7 +29,7 @@ class LIGHTUI : public QWidget
 
     void DrawCirque(QPainter& painter);
     void DrawText(QPainter& painter);
-    void ProgressBarColorSet(QPainter& painter, float& num);
+    void ProgressBarColorSet(QPainter& painter, bool swit);
 
 public:
     LIGHTUI(QWidget *parent = nullptr);
@@ -41,16 +40,22 @@ public:
     // 外界读取数据函数
     int endAngle() const
     {
-        return m_endAngle;
+        return m_light;
     }
 
+    int endCo2() const
+    {
+        return m_CO2;
+    }
+
+    // 接口函数
     void setEndAngle(const int& endAngle)
     {
         m_light = endAngle;
         update();
     }
 
-    void setCo2(const int& num) {
+    void setEndCo2(const int& num) {
         m_CO2 = num;
         update();
     }
@@ -60,11 +65,13 @@ protected:
 
 signals:
     void endAngleChanged(int Angle);
-
-protected slots:
-    void clicked();
-    void clicked1();
-
+    void setCo2Changed(int Angle);
+    /*
+     * 测试需要
+    protected slots:
+        void clicked();
+        void clicked1();
+    */
 };
 
 #endif // LIGHTUI_H
