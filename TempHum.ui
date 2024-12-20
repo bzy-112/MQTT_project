@@ -20,13 +20,6 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>点我</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QLabel" name="TempHumlbl">
        <property name="font">
         <font>
