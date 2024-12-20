@@ -4,7 +4,7 @@
 #include <QWidget>
 
 namespace Ui {
-class TEMPHUMTIYUI;
+    class TEMPHUMTIYUI;
 }
 
 class TEMPHUMTIYUI : public QWidget
@@ -15,8 +15,12 @@ public:
     explicit TEMPHUMTIYUI(QWidget *parent = nullptr);
     ~TEMPHUMTIYUI();
 
+    void LineChart();
+    void PieChart();
+    void BarChart();
+
 private:
-    Ui::TEMPHUMTIYUI *ui;
+    Ui::TEMPHUMTIYUI* ui;
 };
 
 #endif // TEMPHUMTIYUI_H
