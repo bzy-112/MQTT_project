@@ -136,3 +136,34 @@ void LEDUI::on_hs_bathe_sliderReleased()
         set_btn_state(ui->btn_bathe, bathe_state);
     }
 }
+
+void LEDUI::setLiving()
+{
+
+    set_btn_state(ui->btn_living, living_state);
+    set_hs_state(ui->hs_living, living_state);
+
+    /*   QPixmap pixmap(":/icon/lightOn.png");
+    QIcon icon(pixmap.scaled(QSize(127, 150), Qt::KeepAspectRatio));
+    ui->btn_living->setIcon(icon);
+    ui->btn_living->setIconSize(QSize(127, 150));
+    // state = !state;    */
+}
+
+void LEDUI::setkitchen()
+{
+    set_btn_state(ui->btn_kitchen, kitchen_state);
+    set_hs_state(ui->hs_kitchen, kitchen_state);
+}
+
+void LEDUI::setbedroom()
+{
+    set_btn_state(ui->btn_bedroom, bedroom_state);
+    set_hs_state(ui->hs_bedroom, bedroom_state);
+}
+
+void LEDUI::setbathe()
+{
+    set_btn_state(ui->btn_bathe, bathe_state);
+    set_hs_state(ui->hs_bathe, bathe_state);
+}

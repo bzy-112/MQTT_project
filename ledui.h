@@ -43,6 +43,13 @@ private:
     bool kitchen_state = false;
     bool bedroom_state = false;
     bool bathe_state = false;
+
+public:
+    // 接口函数
+    void setLiving();
+    void setkitchen();
+    void setbedroom();
+    void setbathe();
 private:
     // 切换按键状态
     void set_btn_state(QPushButton* btn, bool &state);

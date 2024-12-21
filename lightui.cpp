@@ -89,10 +89,10 @@ void LIGHTUI::ProgressBarColorSet(QPainter& painter, bool swit)
     float num;
 
     if(swit) {
-        num = (float)m_light / 360 * 100;
+        num = (float)m_light;
         Light_Intensity = num;
     } else {
-        num = (float)m_CO2 / 360 * 100;
+        num = (float)m_CO2;
         Carbom_Intensity = num;
     }
 

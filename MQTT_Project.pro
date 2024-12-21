@@ -47,7 +47,10 @@ RESOURCES += \
 INCLUDEPATH += D:/opencv/open_4.6.0_built/install/include/opencv2
 LIBS += D:/opencv/open_4.6.0_built/install/x64/mingw/lib/libopencv_*.a
 
+
 INCLUDEPATH += C:/Users/BY/Desktop/QT_project/QtOnlie/MQTT_Project/include
-LIBS += C:\Users/BY/Desktop/QT_project/QtOnlie/MQTT_Project/lib/libQt6Mqtt.a
+LIBS += C:/Users/BY/Desktop/QT_project/QtOnlie/MQTT_Project/lib/libQt6Mqtt.a
+
+
 
 

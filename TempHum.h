@@ -31,7 +31,7 @@ public:
 private:
     Ui::TempHum* ui;
 
-private:
+public:
     void setData(float tempnum, int humnum);
 };
 

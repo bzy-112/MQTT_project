@@ -1,7 +1,7 @@
 #include "temphumtiyui.h"
 #include "ui_temphumtiyui.h"
 // Qchar
-#include "TempHum.h"
+
 #include <QtCharts>
 
 TEMPHUMTIYUI::TEMPHUMTIYUI(QWidget *parent)
@@ -12,7 +12,7 @@ TEMPHUMTIYUI::TEMPHUMTIYUI(QWidget *parent)
     setWindowTitle("Template and Hum");
     setFixedSize(1024, 600);
 
-    TempHum *temphum = new TempHum(this);
+    temphum = new TempHum(this);
     temphum->show();
     temphum->setFixedSize(this->width(), this->height());
 

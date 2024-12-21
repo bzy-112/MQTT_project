@@ -43,6 +43,8 @@ Widget::Widget(QWidget *parent)
     //设置窗口的背景图片大小 以及设置分割线
     setBackgroundWindow();
 
+    // 连接MQTT服务器
+    clientMqtt();
 }
 
 Widget::~Widget() {}

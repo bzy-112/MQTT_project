@@ -30,8 +30,7 @@ class Widget : public QWidget
     TEMPHUMTIYUI* m_temphumtiyui;
 
     //Mqtt
-    QMqttClient *client;
-
+    QMqttClient* client;
 
 public:
     Widget(QWidget *parent = nullptr);
@@ -50,6 +49,8 @@ private:
     void setBackgroundWindow();
     // 初始化MQTT客户端
     void clientMqtt();
+    // 接收MQTT数据
+    void MqttRecv(const QByteArray &message, const QMqttTopicName &topic);
 
 protected:
     QSize sizeHint()const;

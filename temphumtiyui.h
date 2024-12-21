@@ -2,6 +2,7 @@
 #define TEMPHUMTIYUI_H
 
 #include <QWidget>
+#include "TempHum.h"
 
 namespace Ui {
     class TEMPHUMTIYUI;
@@ -18,6 +19,7 @@ public:
     void LineChart();
     void PieChart();
     void BarChart();
+    TempHum* temphum;
 
 private:
     Ui::TEMPHUMTIYUI* ui;
