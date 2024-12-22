@@ -13,11 +13,6 @@ TempHum::TempHum(QWidget *parent) :
     /*显示温度湿度曲线*/
     TempChart();
 
-    // timer = new QTimer(this);
-    // timer->start(1000);
-    // connect(timer, SIGNAL(timeout()), this, SLOT(updateTemp()));
-    // connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(updateTemp()));
-
 }
 
 void TempHum::TempChart()

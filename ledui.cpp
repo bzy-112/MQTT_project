@@ -143,11 +143,6 @@ void LEDUI::setLiving()
     set_btn_state(ui->btn_living, living_state);
     set_hs_state(ui->hs_living, living_state);
 
-    /*   QPixmap pixmap(":/icon/lightOn.png");
-    QIcon icon(pixmap.scaled(QSize(127, 150), Qt::KeepAspectRatio));
-    ui->btn_living->setIcon(icon);
-    ui->btn_living->setIconSize(QSize(127, 150));
-    // state = !state;    */
 }
 
 void LEDUI::setkitchen()

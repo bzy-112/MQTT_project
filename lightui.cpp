@@ -13,26 +13,18 @@ LIGHTUI::LIGHTUI(QWidget *parent)
     : QWidget(parent), Light_Intensity(0),
       Carbom_Intensity(0)
 {
-    // ui->setupUi(this);
-    /*背景图设置*/
-    // QPixmap pixmap(":/backgruond.gif");
-    // QPalette palette;
-    // palette.setBrush(backgroundRole(), QBrush(pixmap));
-    // setPalette(palette);
-    // setAutoFillBackground(true);
-    /*
-     *  测试需要
-        QPushButton* button = new QPushButton(this);
-        button->setText("点我");
-        connect(button, SIGNAL(clicked()), this, SLOT(clicked()));
+    * 测试需要
+    QPushButton* button = new QPushButton(this);
+    button->setText("点我");
+    connect(button, SIGNAL(clicked()), this, SLOT(clicked()));
 
-        QPushButton* button1 = new QPushButton(this);
-        button1->setText("按键二");
-        connect(button1, SIGNAL(clicked()), this, SLOT(clicked1()));
-        QHBoxLayout* hlayout = new QHBoxLayout(this);
-        hlayout->addWidget(button);
-        hlayout->addWidget(button1);
-    */
+    QPushButton* button1 = new QPushButton(this);
+    button1->setText("按键二");
+    connect(button1, SIGNAL(clicked()), this, SLOT(clicked1()));
+    QHBoxLayout* hlayout = new QHBoxLayout(this);
+    hlayout->addWidget(button);
+    hlayout->addWidget(button1);
+    * /
     animation = new QPropertyAnimation(this, "endAngle");
     animation->setDuration(500);
     animation->setStartValue(0); // 属性的起始值
@@ -43,8 +35,6 @@ LIGHTUI::LIGHTUI(QWidget *parent)
 
     setFixedSize(1024, 600);
 
-    // 启动动画
-    // animation->start();
 }
 
 void LIGHTUI::DrawText(QPainter& painter)
