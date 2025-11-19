@@ -24,13 +24,13 @@ Widget::Widget(QWidget *parent)
     //创建栈式布局管理器 把创建的窗口添加进栈式布局管理器
     m_stacklayout = new QStackedLayout();
     m_ledui = new LEDUI();
-    m_camreui = new CAMREUI();
+    // m_camreui = new CAMREUI();
     m_lightui = new LIGHTUI();
     m_temphumtiyui = new TEMPHUMTIYUI();
     m_stacklayout->addWidget(m_ledui);
     m_stacklayout->addWidget(m_temphumtiyui);
     m_stacklayout->addWidget(m_lightui);
-    m_stacklayout->addWidget(m_camreui);
+    // m_stacklayout->addWidget(m_camreui);
 
     //创建垂直布局管理器  将栈式布局管理器和垂直布局管理器添加进
     QHBoxLayout* hlayout = new QHBoxLayout(this);
@@ -54,10 +54,10 @@ void Widget::on_m_ledui_clicked()
     m_stacklayout->setCurrentWidget(m_ledui);
 }
 
-void Widget::on_m_camreui_clicked()
-{
-    m_stacklayout->setCurrentWidget(m_camreui);
-}
+// void Widget::on_m_camreui_clicked()
+// {
+// m_stacklayout->setCurrentWidget(m_camreui);
+// }
 
 void Widget::on_m_lightui_clicked()
 {
@@ -99,7 +99,7 @@ void Widget::setButton()
     connect(LEDButton, SIGNAL(clicked()), this, SLOT(on_m_ledui_clicked()));
     connect(TempHumtiyButton, SIGNAL(clicked()), this, SLOT(on_m_temphumtiyui_clicked()));
     connect(LightButton, SIGNAL(clicked()), this, SLOT(on_m_lightui_clicked()));
-    connect(Camre, SIGNAL(clicked()), this, SLOT(on_m_camreui_clicked()));
+    // connect(Camre, SIGNAL(clicked()), this, SLOT(on_m_camreui_clicked()));
 }
 
 void Widget::setBackgroundWindow()

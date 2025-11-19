@@ -13,7 +13,7 @@ LIGHTUI::LIGHTUI(QWidget *parent)
     : QWidget(parent), Light_Intensity(0),
       Carbom_Intensity(0)
 {
-    * 测试需要
+    /* 测试需要
     QPushButton* button = new QPushButton(this);
     button->setText("点我");
     connect(button, SIGNAL(clicked()), this, SLOT(clicked()));
@@ -24,7 +24,7 @@ LIGHTUI::LIGHTUI(QWidget *parent)
     QHBoxLayout* hlayout = new QHBoxLayout(this);
     hlayout->addWidget(button);
     hlayout->addWidget(button1);
-    * /
+    */
     animation = new QPropertyAnimation(this, "endAngle");
     animation->setDuration(500);
     animation->setStartValue(0); // 属性的起始值

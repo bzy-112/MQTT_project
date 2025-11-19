@@ -1,7 +1,8 @@
 QT       += core gui
 QT       += network
-QT += multimedia multimediawidgets
+QT       += multimedia multimediawidgets
 QT       += charts
+QT       += mqtt
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,7 +14,6 @@ CONFIG += c++17
 
 SOURCES += \
     TempHum.cpp \
-    camreui.cpp \
     ledui.cpp \
     lightui.cpp \
     main.cpp \
@@ -23,7 +23,6 @@ SOURCES += \
 
 HEADERS += \
     TempHum.h \
-    camreui.h \
     ledui.h \
     lightui.h \
     temphumtiyui.h \
@@ -36,7 +35,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 FORMS += \
     TempHum.ui \
-    camreui.ui \
     ledui.ui \
     lightui.ui \
     temphumtiyui.ui
@@ -44,12 +42,7 @@ FORMS += \
 RESOURCES += \
     main.qrc
 
-INCLUDEPATH += D:/opencv/open_4.6.0_built/install/include/opencv2
-LIBS += D:/opencv/open_4.6.0_built/install/x64/mingw/lib/libopencv_*.a
 
-
-INCLUDEPATH += C:/Users/BY/Desktop/QT_project/QtOnlie/MQTT_Project/include
-LIBS += C:/Users/BY/Desktop/QT_project/QtOnlie/MQTT_Project/lib/libQt6Mqtt.a
 
 
 

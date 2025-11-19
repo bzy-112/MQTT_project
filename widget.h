@@ -6,11 +6,11 @@
 //栈式布局管理器
 #include <QStackedLayout>
 #include "ledui.h"
-#include "camreui.h"
+// #include "camreui.h"
 #include "lightui.h"
 #include "temphumtiyui.h"
 #include "QtMqtt/QMqttClient"
-#include <qmqttmessage.h>
+#include <QtMqtt/qmqttmessage.h>
 #include <QtNetwork>
 #include <QHostAddress>
 
@@ -25,7 +25,7 @@ class Widget : public QWidget
 
     QStackedLayout* m_stacklayout;
     LEDUI* m_ledui;
-    CAMREUI* m_camreui;
+    // CAMREUI* m_camreui;
     LIGHTUI* m_lightui;
     TEMPHUMTIYUI* m_temphumtiyui;
 
@@ -38,7 +38,7 @@ public:
 
 private slots:
     void on_m_ledui_clicked();
-    void on_m_camreui_clicked();
+    // void on_m_camreui_clicked();
     void on_m_lightui_clicked();
     void on_m_temphumtiyui_clicked();
 
